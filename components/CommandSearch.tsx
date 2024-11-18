@@ -1,15 +1,7 @@
 "use client";
 
+import { Calendar, CreditCard, Search, User } from "lucide-react";
 import * as React from "react";
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Search,
-  Settings,
-  Smile,
-  User,
-} from "lucide-react";
 
 import {
   CommandDialog,
@@ -21,6 +13,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
+import { HamburgerIcon, PizzaIcon } from "./icons";
 import { Input } from "./ui/input";
 
 export function CommandSearch() {
@@ -62,11 +55,11 @@ export function CommandSearch() {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <CommandItem>
-              <Calendar />
+              <HamburgerIcon />
               <span>Burgers</span>
             </CommandItem>
             <CommandItem>
-              <Smile />
+              <PizzaIcon />
               <span>Pizzas</span>
             </CommandItem>
           </CommandGroup>
@@ -78,11 +71,6 @@ export function CommandSearch() {
               <User />
               <span>Profile</span>
               <CommandShortcut>⌘P</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <CreditCard />
-              <span>Billing</span>
-              <CommandShortcut>⌘B</CommandShortcut>
             </CommandItem>
           </CommandGroup>
         </CommandList>
