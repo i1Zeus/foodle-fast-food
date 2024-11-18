@@ -56,6 +56,15 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        grow: {
+          "0%": { width: "0%" },
+          "100%": { width: "50%" },
+        },
+      },
+      animation: {
+        grow: "grow 300ms ease-in-out forwards",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
