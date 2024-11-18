@@ -59,7 +59,7 @@ export default {
       keyframes: {
         grow: {
           "0%": { width: "0%" },
-          "100%": { width: "50%" },
+          "100%": { width: "75%" },
         },
       },
       animation: {
