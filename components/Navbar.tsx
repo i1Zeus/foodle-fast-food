@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { CommandSearch } from "./CommandSearch";
+import AuthComponent from "./AuthComponent";
 
 export default function Navbar() {
   const [state, setState] = useState(false);
@@ -45,33 +46,28 @@ export default function Navbar() {
               <li
                 key={id}
                 className={cn(
-                  "hover:text-orange-600 text-gray-600 font-bold transition-all duration-150",
-                  active === item.path ? "text-orange-600" : ""
+                  "hover:text-orange-600 text-gray-300 font-bold transition-all duration-150 relative",
+                  active === item.path ? "text-black" : ""
                 )}
               >
                 <Link href={item.path}>{item.title}</Link>
-                <span></span>
+                <div
+                  className={cn(
+                    "absolute bottom-0 left-0 h-1 bg-orange-400 rounded-full",
+                    active === item.path
+                      ? "animate-grow"
+                      : "w-0 transition-all duration-300"
+                  )}
+                />
               </li>
             ))}
             <form className="relative flex items-center p-2 space-x-2 rounded-md">
               <CommandSearch />
             </form>
           </ul>
+          <AuthComponent />
         </div>
-        <div className="md:flex hidden gap-3">
-          <Link
-            href="/login"
-            className="hover:bg-orange-500 hover:text-white px-4 py-2 text-orange-500 transition-all duration-150 rounded-full"
-          >
-            Login
-          </Link>
-          <Link
-            href="/sign-up"
-            className="hover:bg-orange-500 hover:text-white px-4 py-2 text-orange-500 transition-all duration-150 border-2 border-orange-500 rounded-full"
-          >
-            Sign Up
-          </Link>
-        </div>
+        <AuthComponent className="md:flex hidden" />
       </div>
     </nav>
   );
