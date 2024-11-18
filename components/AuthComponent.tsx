@@ -17,7 +17,7 @@ const AuthComponent = ({ className }: AuthComponentProps) => {
         Login
       </Link>
       <Link
-        href="/sign-up"
+        href="/login"
         className="hover:bg-orange-500 hover:text-white px-4 py-2 text-orange-500 transition-all duration-150 border-2 border-orange-500 rounded-full"
       >
         Sign Up
