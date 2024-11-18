@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased max-h-screen capitalize">
+      <body className="max-h-screen antialiased capitalize">
         <Navbar />
         {children}
         <Footer />
