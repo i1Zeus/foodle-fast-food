@@ -15,7 +15,7 @@ const Hero = () => {
             width={250}
             height={250}
             alt="line"
-            className="top-6 absolute right-[38%]"
+            className="top-12 absolute right-[38%]"
           />
           <Image
             src="/heroImage.png"
