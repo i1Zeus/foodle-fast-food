@@ -20,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="md:border-0 w-full bg-white border-b">
+    <nav className="md:border-0 bg-back z-50 w-full border-b">
       <div className="md:flex max-w-screen-2xl items-center px-4 mx-auto">
         <div className="md:py-5 md:block flex items-center justify-between py-3">
           <Link href="/">
@@ -46,14 +46,14 @@ export default function Navbar() {
               <li
                 key={id}
                 className={cn(
-                  "hover:text-orange-600 text-gray-300 font-bold transition-all duration-150 relative",
+                  "hover:text-black text-gray-300 font-bold transition-all duration-150 relative group",
                   active === item.path ? "text-black" : ""
                 )}
               >
                 <Link href={item.path}>{item.title}</Link>
                 <div
                   className={cn(
-                    "absolute bottom-0 left-0 h-1 bg-orange-400 rounded-full",
+                    "absolute bottom-0 left-0 h-1 bg-orange-400 rounded-full group-hover:w-[75%]",
                     active === item.path
                       ? "animate-grow"
                       : "w-0 transition-all duration-300"

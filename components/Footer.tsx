@@ -2,7 +2,7 @@ import { FacebookIcon, InstagramIcon, TiktokIcon, TwitterIcon } from "./icons";
 
 const Footer = () => {
   return (
-    <footer className="h-[350px] bg-orange-100/50">
+    <footer className="h-[350px] bg-orange-100/50 w-full">
       <div className="sm:px-6 lg:px-8 max-w-screen-2xl flex flex-col justify-center h-full px-4 mx-auto">
         <div className="md:grid-cols-6 grid grid-cols-4 gap-8">
           {/* Section 1 */}
