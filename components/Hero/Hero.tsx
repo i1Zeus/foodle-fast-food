@@ -4,7 +4,7 @@ import HeroCards from "./HeroCards";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[85vh]">
       <section className="flex flex-col items-center justify-center w-full h-full">
         <div className="container z-50 flex items-center justify-evenly w-full -mt-[30%] text-black relative">
           <h1 className="text-pOne text-6xl font-bold">
