@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BestDelivered = () => {
   return (
-    <div className="relative w-full h-[600px] flex flex-col py-8 px-16 -mt-10">
+    <div className="h-fit relative flex flex-col w-full px-32 pb-24 -mt-10">
       <h1 className="text-4xl font-bold capitalize">
         Best <span className="text-red-600">delivered</span>
         <br />
